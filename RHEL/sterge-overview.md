@@ -29,3 +29,14 @@
 * `pvs` shows devices and what they belong to. You should use this (specifically with `/dev/mapper/*`) to create lvm filters. 
 * `/etc/lvm/backup` contains the last backups. `/etc/lvm/archive` contains historical data
   * May need to check here for prior lvm activity for a can't boot
+
+##### Boot from SAN
+* may need to check thr grub menu
+ 
+##### Resize FS
+* Always work in sectors `# fdisk -u <dev>`
+* Grab the starting sector of the old partition via fdisk
+* Then set the start and end sectors. 
+* The supported way is to extend via LVM, but you can manually set them
+
+rport: blocked FC remote port time out: means a port outside of the system is having an issue
