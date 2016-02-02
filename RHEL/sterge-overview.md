@@ -22,3 +22,10 @@
 ##### Multipath
 * logically aggregting devices. 
 * `mpath` devices are created on boot with the `dm_multipath` module. To completely remove `mpath` devices, you will need to blacklist that module and rebuild the initramfs/initrd. 
+* You can use `# multipath -ll` to see if paths are missing in the path configurations
+ 
+##### LVM
+* `/etc/lvm/lvm.conf`
+* `pvs` shows devices and what they belong to. You should use this (specifically with `/dev/mapper/*`) to create lvm filters. 
+* `/etc/lvm/backup` contains the last backups. `/etc/lvm/archive` contains historical data
+  * May need to check here for prior lvm activity for a can't boot
