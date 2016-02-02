@@ -18,3 +18,7 @@
 
 ##### Device Mapper
 * /proc/patitions to map major:minor numbers 
+
+##### Multipath
+* logically aggregting devices. 
+* `mpath` devices are created on boot with the `dm_multipath` module. To completely remove `mpath` devices, you will need to blacklist that module and rebuild the initramfs/initrd. 
